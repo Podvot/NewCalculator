@@ -16,8 +16,7 @@ namespace NewCalculator
                 Console.WriteLine("Enter a second number:");
                 double n2 = Convert.ToDouble(Console.ReadLine());
         
-                string connectionString =
-                    "Server=LAPTOP-SAUNN72M\\\\MSSQLSERVER,1433;Database=CalculatorStorage;User Id=sa;Password=sa;";
+                string connectionString = "MyConnectionString";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
