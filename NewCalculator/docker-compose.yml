@@ -1,0 +1,11 @@
+﻿version: '3.9'
+services:
+  calculator:
+    image: mcr.microsoft.com/mssql/server:latest
+    container_name: CalculatorStorage
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=sa
+      - MSSQL_PID=Express
+    ports:
+      - "1433:1433"
