@@ -21,9 +21,11 @@ steps:
     environment:
       SONARSECRET:
         from_secret: SonarCubeSecret
+      SONARKEY:
+        from_secret: SonarCubeKey
       commands:
         - dotnet sonarscanner begin 
-          /k:"$easv-devops_NewCalculator"
+          /k:"$SonarQubeKey"
           /d:sonar.host.url="http://sonar.setgo.dk:9000"   
           /d:sonar.token="$SONARSECRET"
         - dotnet build --no-incremental
